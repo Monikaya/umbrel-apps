@@ -15,8 +15,10 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
       - ${UMBREL_ROOT}/data/storage/downloads:/downloads
+      # We like seperating our filed media here!!
+      - ${UMBREL_ROOT}/data/storage/media/shows:/shows
     restart: on-failure
-
+# Not sure what "mac" does atm so I have just commented out transmission references in this commit
   mac:
     image: getumbrel/media-app-configurator:v1.0.0@sha256:e3d8b18e0186f76dd3f3d4acacc9101b4abbf302d8f2afbb47cdd3879b1a1008
     user: "1000:1000"
@@ -27,6 +29,6 @@ services:
     environment:
       DOWNLOAD_CLIENT_API_URL: "http://sonarr_server_1:8989/api/v3/downloadclient"
       ROOT_FOLDER_API_URL: "http://sonarr_server_1:8989/api/v3/rootfolder"
-      TRANSMISSION_HOST: "transmission_server_1"
-      TRANSMISSION_PORT: 9091
-      ROOT_FOLDER: "/downloads/shows"
+      # TRANSMISSION_HOST: "transmission_server_1"
+      # TRANSMISSION_PORT: 9091
+      ROOT_FOLDER: "/media/shows"

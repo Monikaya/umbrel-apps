@@ -15,8 +15,12 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
       - ${UMBREL_ROOT}/data/storage/downloads:/downloads
+      # Not sure if it's needed to give prowlarr access to memdia rn, but have for now as it's midnight and i have to sleep
+      #TODO: figure out if this is neccessary
+      - ${UMBREL_ROOT}/data/storage/media/movies:/movies
+      - ${UMBRERL_ROOT}/data/storage/media/shows:/shows
     restart: on-failure
-
+# Not sure what "mac" does atm so I have just commented out transmission references in this commit
   mac:
     image: getumbrel/media-app-configurator:v1.2.0@sha256:6aa568b53f6743dc4a7b3212f97b9d4ca78800ede5eadc0e4b80c7f3af50eda3
     user: "1000:1000"
@@ -26,8 +30,8 @@ services:
     environment:
       APP_ID: "prowlarr"
       APP_URL: "http://prowlarr_server_1:9696"
-      TRANSMISSION_HOST: "transmission_server_1"
-      TRANSMISSION_PORT: 9091
+      #TRANSMISSION_HOST: "transmission_server_1"
+      #TRANSMISSION_PORT: 9091
       RADARR_URL: "http://radarr_server_1:7878"
       RADARR_CONFIG_XML: "${APP_PROWLARR_RADARR_CONFIG_XML}"
       LIDARR_URL: "http://lidarr_server_1:8686"
