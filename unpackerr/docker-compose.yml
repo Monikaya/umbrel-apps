@@ -98,6 +98,3 @@ services:
       - ${APP_DATA_DIR}/data/config:/config
       - ${UMBREL_ROOT}/data/storage/downloads:/downloads
     restart: on-failure
-  
-  security_opt:
-    - no-new-privileges:true
