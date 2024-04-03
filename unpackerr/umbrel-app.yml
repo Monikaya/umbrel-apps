@@ -6,7 +6,7 @@ version: "latest"
 tagline: Silly unpackerr for arr users
 description: >-
   Erm unpackerr for *arr setups & 
-developer: Sonarr
+developer: Unpackerr
 website: https://unpackerr.zip/
 dependencies: []
 repo: https://github.com/Unpackerr/unpackerr
