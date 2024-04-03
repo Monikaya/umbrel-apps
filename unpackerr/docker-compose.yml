@@ -12,7 +12,6 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=${TZ}
       # General config
       - UN_DEBUG=false
       - UN_LOG_FILE=
