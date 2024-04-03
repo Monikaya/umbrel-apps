@@ -1,31 +1,28 @@
 manifestVersion: 1.1
-id: sonarr
+id: unpackerr
 category: media
-name: Sonarr
-version: "3.0.10"
-tagline: Smart PVR for newsgroup and bittorrent users
+name: Unpackerr
+version: "latest"
+tagline: Silly unpackerr for arr users
 description: >-
   Erm unpackerr for *arr setups & 
 developer: Sonarr
 website: https://unpackerr.zip/
 dependencies: []
-repo: https://github.com/Sonarr/Sonarr
-support: https://github.com/Sonarr/Sonarr/issues
-port: 8989
+repo: https://github.com/Unpackerr/unpackerr
+support: https://github.com/Unpackerr/unpackerr/issues
+port: 5656
 gallery:
   - 1.jpg
   - 2.jpg
   - 3.jpg
 path: ""
 releaseNotes: >-
-  This release updates Sonarr from 3.0.9 to 3.0.10
-
-
-  Full tags list here: https://github.com/Sonarr/Sonarr/tags
+  Uhhhhh idk
 defaultUsername: ""
 defaultPassword: ""
 torOnly: false
 permissions:
   - STORAGE_DOWNLOADS
-submitter: Umbrel
+submitter: Monika
 submission: https://github.com/getumbrel/umbrel-apps/commit/60878f278d544b204d8e7c96240c797f43a9b319
