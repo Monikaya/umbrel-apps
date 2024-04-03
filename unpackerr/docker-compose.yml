@@ -12,6 +12,8 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
+      # Disable GUI cus it's weird
+      - USEGUI=false
       # General config
       - UN_DEBUG=false
       - UN_LOG_FILE=
