@@ -27,8 +27,8 @@ services:
     container_name: jellyfin-vue
     environment:
       - DEFAULT_SERVERS=jellyfin_media-server_1
-    #ports:
-      #- 7097:80
+    ports:
+      - 7097:80
     restart: unless-stopped
 ### Jellyfin Segment Editor - Media Segments management made easy
 ### Also available as tiny app for your desktop
