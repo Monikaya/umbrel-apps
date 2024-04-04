@@ -5,7 +5,8 @@ name: Unpackerr
 version: "latest"
 tagline: Silly unpackerr for arr users
 description: >-
-  Erm unpackerr for *arr setups & 
+  Erm unpackerr for *arr setups & jellyfin/plex
+  DISCLAIMER: you will have to go into the commandline and change `umbrel/app-data/unpackerr/data/
 developer: Unpackerr
 website: https://unpackerr.zip/
 dependencies: []
