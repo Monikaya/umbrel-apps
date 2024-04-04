@@ -6,7 +6,7 @@ version: "latest"
 tagline: Silly unpackerr for arr users
 description: >-
   Erm unpackerr for *arr setups & jellyfin/plex
-  DISCLAIMER: you will have to go into the commandline and change `umbrel/app-data/unpackerr/data/
+  DISCLAIMER: you will have to go into the commandline and change `umbrel/app-data/unpackerr/data/unpackerr.conf` to have your API keys etc, as I have not configured it to go steal them. I might fix this in the future, but for right now I have other things to do to make this fork usable for myself. Yippee! 
 developer: Unpackerr
 website: https://unpackerr.zip/
 dependencies: []
