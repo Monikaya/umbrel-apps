@@ -4,12 +4,11 @@ services:
   app_proxy:
     environment:
       APP_HOST: jellyfin_server_1
-      APP_PORT: 7097
+      APP_PORT: 8096
       PROXY_AUTH_ADD: "false"
 
-  media-server:
-    # Patched jellyfin image which supports the media analyzer
-    image: ghcr.io/endrl/jellyfin:latest
+  server:
+    image: linuxserver/jellyfin:10.8.13@sha256:deb61ff251882fb21e5187b7d1988e84ea438626300041f7d9474a5dc0618e24
     restart: on-failure
     hostname: "${DEVICE_HOSTNAME}"
     environment:
@@ -17,25 +16,7 @@ services:
       - PGID=1000
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
-      - ${UMBREL_ROOT}/data/storage/media:/media
+      - ${UMBREL_ROOT}/data/storage/downloads:/downloads
     ports:
-          # Service auto-discovery
+      # Service auto-discovery
       - 7359:7359/udp
-      - 8096:8096
-  server:
-    image: ghcr.io/endrl/jellyfin-vue:latest
-    container_name: jellyfin-vue
-    environment:
-      - DEFAULT_SERVERS=jellyfin_media-server_1
-    ports:
-      - 7097:80
-    restart: unless-stopped
-### Jellyfin Segment Editor - Media Segments management made easy
-### Also available as tiny app for your desktop
-### Project: https://github.com/endrl/segment-editor#jellyfin-segment-editor
-  jellyfin-se:
-    image: ghcr.io/endrl/jellyfin-se:latest
-    container_name: jellyfin-se
-    ports:
-      - 7098:80
-    restart: unless-stopped

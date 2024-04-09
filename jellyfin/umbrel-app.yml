@@ -5,8 +5,6 @@ name: Jellyfin
 version: "10.8.13"
 tagline: The Free Software Media System
 description: >-
-  I have added media analyzer w/ patched jellyfin image to this
-  Please install jellyfin-vue from the appstore in order to actually be able to skip intros/outros -Monika
   Jellyfin is the volunteer-built media solution that puts you in control of your media. Stream to any device from your own server, with no strings attached. Your media, your server, your way.
 
 
